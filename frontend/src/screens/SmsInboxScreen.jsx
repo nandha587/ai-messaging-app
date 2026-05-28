@@ -52,7 +52,7 @@ const T = {
   botDim:     'rgba(167,139,250,0.12)',
 };
 
-const GEMINI_KEY = 'AIzaSyBNHB7_7qQkGjO55h_K26kzvw34I9uRed8';
+const GEMINI_KEY = process.env.EXPO_PUBLIC_GEMINI_API_KEY;
 
 // ─── Screen states ──────────────────────────────────────────────────────────
 const SCREEN = {
@@ -83,6 +83,9 @@ function formatTime(ts) {
 
 // ─── Gemini auto-reply ──────────────────────────────────────────────────────
 async function callGeminiReply(contactName, address, recentMessages) {
+  if (!GEMINI_KEY || GEMINI_KEY === 'your_gemini_api_key_here') {
+    throw new Error('GEMINI_KEY is not configured or is a placeholder.');
+  }
   const history = recentMessages
     .slice(-6)
     .map(m => `${m.type === 2 ? 'Me' : (contactName || address)}: ${m.body}`)

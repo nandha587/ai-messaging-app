@@ -6,7 +6,7 @@ import { encryptMessage, decryptMessage } from './encryption';
 
 const CHATS_KEY = '@mock_chats';
 const MESSAGES_PREFIX = '@mock_messages_';
-const GEMINI_API_KEY = 'AIzaSyBNHB7_7qQkGjO55h_K26kzvw34I9uRed8';
+const GEMINI_API_KEY = process.env.EXPO_PUBLIC_GEMINI_API_KEY;
 
 class MockSocket {
   constructor() {
@@ -157,6 +157,9 @@ class MockSocket {
     }, 500);
 
     try {
+      if (!GEMINI_API_KEY || GEMINI_API_KEY === 'your_gemini_api_key_here') {
+        throw new Error('GEMINI_API_KEY is not configured or is a placeholder.');
+      }
       // Build sliding context window of last 8 decrypted messages
       const chatHistory = previousMessages
         .slice(-8)
@@ -328,6 +331,9 @@ Do NOT wrap the JSON in Markdown block quotes or include any extra text. Just re
 
     setTimeout(async () => {
       try {
+        if (!GEMINI_API_KEY || GEMINI_API_KEY === 'your_gemini_api_key_here') {
+          throw new Error('GEMINI_API_KEY is not configured or is a placeholder.');
+        }
         const systemPrompt = `You are a person named ${otherUser.displayName}.
 Your status message is "${otherUser.statusMessage || ''}".
 A user is messaging you. Respond to their message naturally, casually, and briefly as a friend.
