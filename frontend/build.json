@@ -1,0 +1,44 @@
+{
+  "id": "d134c41b-d4d3-4b5b-8543-e0d9741f3f08",
+  "status": "ERRORED",
+  "platform": "ANDROID",
+  "error": {
+    "errorCode": "EAS_BUILD_UNKNOWN_GRADLE_ERROR",
+    "message": "Gradle build failed with unknown error. See logs for the \"Run gradlew\" phase for more information."
+  },
+  "artifacts": {},
+  "initiatingActor": {
+    "id": "c9a898e0-3dac-47b9-8f8e-eadee43ac721",
+    "displayName": "nandha07"
+  },
+  "logFiles": [
+    "https://storage.googleapis.com/eas-workflows-production/logs/3645b76b-950d-4b19-8198-9113e3842cb4/d134c41b-d4d3-4b5b-8543-e0d9741f3f08/2026-05-25T16%3A53%3A24Z-b0210d52-2732-41a7-b60b-5df2283c74c6.txt?X-Goog-Algorithm=GOOG4-RSA-SHA256&X-Goog-Credential=www-production%40exponentjs.iam.gserviceaccount.com%2F20260525%2Fauto%2Fstorage%2Fgoog4_request&X-Goog-Date=20260525T173134Z&X-Goog-Expires=900&X-Goog-SignedHeaders=host&X-Goog-Signature=a7fc5f90b719d6e0f59bbd4c71811306de1acbee03f249a0b0986a692833f28368cf7f8f50a60483eefa8dffe8c9a6584dcf8fa51a2ba09219153638a435d0bf9c8d8d2755bbf0d9db20e690c585e3f006a2bf60f3b949088076853102994a0c3d95f4eeac3c2b7cac4b7550d6900298b3b03d07129ba3c5cc22b374672b0cff81ea3d9779ff056e489fedb30fb94d4fb292299e23eb76c3c423c138854b104a2f7eb5a67b7632486f5ac088d5e45cbe0d39ad81ef44b06dd2c233eae6ceee9dc673a661c9bc5c38b49035ea4868296a825be495d29e6494da9c41b20f9740e21fa0a1b605f78d02703792577e52efc0f95e13322e7dbaf33046413549739657"
+  ],
+  "project": {
+    "id": "3645b76b-950d-4b19-8198-9113e3842cb4",
+    "name": "ai-messaging-app",
+    "slug": "ai-messaging-app",
+    "ownerAccount": {
+      "id": "42874e52-1aba-4a3f-a207-9281be50c878",
+      "name": "nandha07"
+    }
+  },
+  "distribution": "INTERNAL",
+  "buildProfile": "preview",
+  "sdkVersion": "51.0.0",
+  "appVersion": "1.0.0",
+  "appBuildVersion": "1",
+  "gitCommitHash": "243347ab9703f7844d81063b2a4ff6f37b62fff8",
+  "gitCommitMessage": "fix: resolve Kotlin compile error with getSystemService nullability and add androidx.core dependency",
+  "priority": "NORMAL",
+  "createdAt": "2026-05-25T16:46:02.399Z",
+  "updatedAt": "2026-05-25T16:55:10.904Z",
+  "completedAt": "2026-05-25T16:55:10.745Z",
+  "expirationDate": "2026-06-08T16:46:02.431Z",
+  "isForIosSimulator": false,
+  "metrics": {
+    "buildWaitTime": 2643,
+    "buildQueueTime": 443557,
+    "buildDuration": 102146
+  }
+}

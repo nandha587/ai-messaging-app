@@ -1,0 +1,14 @@
+{
+  "name": "expo-sms-inbox",
+  "version": "1.0.0",
+  "description": "Local native module to read Android SMS inbox",
+  "main": "index.ts",
+  "types": "index.d.ts",
+  "expo": {
+    "autolinking": {
+      "android": {
+        "package": "expo.modules.smsinbox"
+      }
+    }
+  }
+}
